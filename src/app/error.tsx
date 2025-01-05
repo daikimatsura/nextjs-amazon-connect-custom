@@ -1,31 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import Link from "next/link";
 
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
-  useEffect(() => {
-    // Optionally log the error to an error reporting service
-    console.error(error);
-  }, [error]);
-
+const Error = ({ error }: { error: Error }) => {
   return (
-    <main className="flex h-full flex-col items-center justify-center">
-      <h2 className="text-center">Something went wrong!</h2>
-      <button
-        className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-        onClick={
-          // Attempt to recover by trying to re-render the invoices route
-          () => reset()
-        }
+    <div className="flex flex-col items-center justify-center h-full">
+      <h1 className="text-4xl font-bold">エラーが発生しました</h1>
+      <p className="text-lg">{error.message}</p>
+      <Link
+        href="/"
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
       >
-        Try again
-      </button>
-    </main>
+        ホームに戻る
+      </Link>
+    </div>
   );
-}
+};
+
+export default Error;
