@@ -1,6 +1,7 @@
 # このリポジトリについて
 
 本リポジトリはNext.jsアプリケーションにAmazon Connectの標準CCPを埋め込んだアプリです。
+<br/>
 コードについての解説は[こちらのブログ](https://www.geekfeed.co.jp/geekblog/nextjs-amazon-connect/)をご覧ください。
 
 # Usage
@@ -9,7 +10,7 @@
 
 1. このリポジトリをクローンします。
    ```
-   git clone https://github.com/daikimatsura/LLRT_PRACTICE.git
+   git clone https://github.com/daikimatsura/nextjs-amazon-connect-custom.git
    ```
 2. プロジェクトディレクトリに移動します。
    ```
